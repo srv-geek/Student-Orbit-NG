@@ -1,0 +1,53 @@
+<app-admin-menu></app-admin-menu>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Subject - Student Orbit</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+</head>
+
+<body>
+
+    <!-- Add Subject Form -->
+    <div class="subject-container">
+        <div class="subject-card">
+            <h2 class="text-center">📚 Add New Subject</h2>
+            <p class="text-center">Enter subject details below</p>
+
+            <form [formGroup]="subject" (ngSubmit)="addSubject()">
+                <div class="row">
+                    <!-- Subject Name -->
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="subjectName"><i class="fas fa-book"></i> Subject Name</label>
+                            <input type="text" id="subjectName" class="form-control" placeholder="Enter Subject Name" formControlName="name" required/>
+                        </div>
+                    </div>
+
+                    <!-- Faculty Assigned -->
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="faculty"><i class="fas fa-chalkboard-teacher"></i> Assigned Faculty</label>
+                            <input type="text" id="faculty" class="form-control" placeholder="Enter Faculty Name" formControlName="assignedFaculty" required/>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submit & Reset Buttons -->
+                <div class="button-group mt-3">
+                    <button type="submit" class="btn btn-success">Add Subject</button>
+                    <button type="reset" class="btn btn-danger ms-2">Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div *ngIf="successMessage" class="alert alert-success text-center">
+        {{ successMessage }}
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+/* Black Navbar */
+.navbar {
+    background-color: #000; /* Pure Black */
+    padding: 15px;
+}
+
+/* Logo Styling */
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+/* Welcome Text */
+.welcome-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffd700; /* Gold */
+    margin-left: 15px;
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+    color: white;
+    font-size: 1rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffd700; /* Gold */
+}
+
+/* Logout Button */
+.logout-btn {
+    background-color: #dc3545;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: #c82333;
+}
+
+/* Responsive Navbar */
+@media (max-width: 992px) {
+    .navbar-nav {
+        text-align: center;
+    }
+    .navbar-nav .nav-item {
+        margin: 5px 0;
+    }
+}

@@ -1,0 +1,83 @@
+/* Global Styles */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #ff6600, #e60073);
+    /* Radiant Background */
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main container to take full height */
+.container {
+    flex: 1;
+    /* Makes the container take full height and push footer down */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Ensures content is spread out */
+}
+
+/* Dashboard Content */
+.dashboard-content {
+    flex-grow: 1;
+    /* Ensures it expands to fill remaining space */
+    padding: 20px;
+}
+
+/* Cards */
+.info-card {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.info-card i {
+    font-size: 2rem;
+    color: #ffd700;
+}
+
+.info-card h4 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Overview Section */
+.overview {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Adjusted Image Size and Alignment */
+.overview-img {
+    width: 600px;
+    height: 500px;
+    display: block;
+    margin: 20px auto 0;
+    border-radius: 10px;
+    object-fit: cover;
+    /* Ensures the image fills the area properly */
+}
+
+/* Responsive Image Adjustments */
+@media (max-width: 768px) {
+    .overview-img {
+        width: 90%;
+        max-width: 600px;
+        height: auto;
+    }
+}

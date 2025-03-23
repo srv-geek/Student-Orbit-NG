@@ -1,0 +1,76 @@
+<app-faculty-menu></app-faculty-menu>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take Attendance</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- Icons -->
+</head>
+
+<body>
+
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="attendance-container p-4 shadow-lg">
+            <h2 class="text-center mb-3">
+                📝 Take Attendance
+            </h2>
+            <p class="text-center text-muted">Select the subject and mark student attendance</p>
+
+            <!-- First Row: Subject, Date, and Time -->
+            <div class="row mb-3">
+                <div class="col-md-4">
+                    <label for="subject" class="form-label fw-bold">📘 Select Subject</label>
+                    <select id="subject" class="form-select rounded-pill" (change)="changeSubject($event)">
+                        <option value="">Select Subject</option>
+                        <option *ngFor="let subject of subjects" [value]="subject.id">{{ subject.name }}</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label for="date" class="form-label fw-bold">📅 Date</label>
+                    <input type="date" id="date" class="form-control rounded-pill" (change)="changeDate($event)">
+                </div>
+                <div class="col-md-4">
+                    <label for="time" class="form-label fw-bold">⏰ Time</label>
+                    <input type="time" id="time" class="form-control rounded-pill" (change)="changeTime($event)">
+                </div>
+            </div>
+
+            <!-- Student Attendance Table -->
+            <div class="table-container">
+                <table class="table table-hover text-center rounded-table">
+                    <thead>
+                        <tr>
+                            <th class="bg-dark text-light">👤 Student Name</th>
+                            <th class="bg-dark text-light">
+                                <input type="checkbox" id="selectAll" class="form-check-input"
+                                    (change)="toggleAll($event)">
+                                Select All
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let student of students">
+                            <td>{{ student.name }}</td>
+                            <td>
+                                <input type="checkbox" class="form-check-input"
+                                    [checked]="selectedStudents.includes(student.id)"
+                                    (change)="toggleStudent(student.id)">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Submit Button -->
+            <button class="btn btn-primary w-100 rounded-pill mt-3 fw-bold" (click)="submitAttendance()">
+                <i class="fas fa-check-circle"></i> Submit Attendance
+            </button>
+        </div>
+    </div>
+
+</body>
+
+</html>

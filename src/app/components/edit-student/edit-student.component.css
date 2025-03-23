@@ -1,0 +1,46 @@
+/* Radiant Gradient Background */
+body {
+    background: linear-gradient(to right, #ff6b6b, #f94c10);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Form Container */
+.form-container {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    width: 400px;
+}
+
+/* Form Labels */
+.form-label {
+    font-weight: bold;
+}
+
+/* Buttons */
+.btn-primary {
+    background: #ffcc00;
+    border: none;
+    color: black;
+}
+
+.btn-primary:hover {
+    background: #e6b800;
+}
+
+.btn-success {
+    background-color: #28a745;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}

@@ -1,0 +1,22 @@
+/* Radiant Gradient Background */
+body {
+    background: linear-gradient(to right, #ff6b6b, #f94c10);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Table Styling */
+.table-container {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Table Header */
+thead {
+    background: #ffcc00;
+    color: black;
+    font-weight: bold;
+}

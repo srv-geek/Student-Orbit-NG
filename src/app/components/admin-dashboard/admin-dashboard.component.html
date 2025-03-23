@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard - Student Orbit</title>
+    <!-- Font Awesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <app-admin-menu></app-admin-menu>
+    <!-- Main Content -->
+    <div class="container mt-4">
+      <section class="dashboard-content">
+        <div class="row">
+          <!-- Cards -->
+          <div class="col-md-4">
+            <div class="info-card">
+              <i class="fas fa-users"></i>
+              <h4>500+</h4>
+              <p>Students Registered</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="info-card">
+              <i class="fas fa-user-tie"></i>
+              <h4>50+</h4>
+              <p>Faculty Members</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="info-card">
+              <i class="fas fa-calendar-check"></i>
+              <h4>95%</h4>
+              <p>Attendance Rate</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Overview Section -->
+        <div class="overview mt-4 text-center">
+          <h3>Overview</h3>
+          <p>
+            Manage students, faculty, and attendance records with ease. Get
+            insights into attendance patterns and generate reports efficiently.
+          </p>
+          <img
+            src="assets/images/admin-dashboard.webp"
+            alt="Admin Dashboard"
+            class="overview-img img-fluid"
+          />
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

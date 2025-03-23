@@ -1,0 +1,56 @@
+<app-admin-menu></app-admin-menu>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Users - Student Orbit</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+</head>
+<body>
+
+    <div class="container my-5">
+        <h2 class="text-center">User Management</h2>
+        <p class="text-center">Manage all registered users efficiently</p>
+
+        <div class="table-responsive">
+            <table class="table table-hover table-striped user-table">
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Password</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of userList">
+                        <td>{{ user.username }}</td>
+                        <td>{{ user.password | hidePassword}}</td>
+                        <td>{{ user.firstName }}</td>
+                        <td>{{ user.lastName }}</td>
+                        <td>{{ user.email }}</td>
+                        <td>
+                            <span class="badge" [ngClass]="{'bg-success': user.role === 'admin', 'bg-primary': user.role === 'faculty'}">
+                                {{ user.role | uppercase }}
+                            </span>
+                        </td>
+                        <td>
+                            <a class="btn btn-warning btn-sm me-2" [routerLink]="['/edit-user', user.username]">
+                                <i class="fas fa-edit"></i> Edit </a>
+                            <button class="btn btn-danger btn-sm" (click)="deleteUser(user.username)">
+                                <i class="fas fa-trash"></i> Delete </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
+

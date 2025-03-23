@@ -1,0 +1,88 @@
+/* Radiant Background */
+body {
+    background: linear-gradient(to right, #ff6600, #e60073);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Table Container */
+.container {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 90%;
+}
+
+/* Table Styling */
+.user-table {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.user-table thead {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.user-table th {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffd700;
+    padding: 15px;
+}
+
+/* Table Row Styling */
+.user-table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transition: 0.3s;
+}
+
+/* Badge for Roles */
+.badge {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+
+/* Action Buttons */
+.btn-warning {
+    background-color: #ffcc00;
+    color: black;
+    border: none;
+}
+
+.btn-warning:hover {
+    background-color: #e6b800;
+}
+
+.btn-danger {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: #cc0000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        max-width: 95%;
+    }
+
+    .user-table {
+        font-size: 0.9rem;
+    }
+
+    .btn-sm {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+}

@@ -1,0 +1,70 @@
+/* 🌟 Radiant Gradient Background */
+body {
+    background: linear-gradient(135deg, #ff7eb3, #ff758c, #ff7eb3);
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 📋 Attendance Container */
+.attendance-container {
+    width: 90%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* 📌 Form Elements */
+.form-label {
+    font-weight: bold;
+    color: #333;
+}
+
+.form-select,
+.form-control {
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* 📊 Table Styling */
+.table-container {
+    margin-top: 15px;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.rounded-table {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* ✅ Checkbox Styling */
+.form-check-input {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+/* 🎨 Button Styling */
+.btn-primary {
+    background: #ff5e62;
+    border: none;
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background: #e84c55;
+    transform: scale(1.05);
+}

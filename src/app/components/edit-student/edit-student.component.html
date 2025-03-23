@@ -1,0 +1,51 @@
+<app-faculty-menu></app-faculty-menu>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Student</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- Icons -->
+</head>
+
+<body>
+
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="card p-4 shadow-lg form-container">
+            <h2 class="text-center mb-3">
+                ✏️ Edit Student
+            </h2>
+            <p class="text-center text-muted">Modify student details below</p>
+          
+                <div class="mb-3">
+                    <label class="form-label">🆔 Student ID</label>
+                    <input type="text" class="form-control" placeholder="Student ID" [(ngModel)]="student.id" readonly>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">👤 Student Name</label>
+                    <input type="text" class="form-control" placeholder="Enter student name" [(ngModel)]="student.name">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">📧 Student Email</label>
+                    <input type="email" class="form-control" placeholder="Enter student email" [(ngModel)]="student.email">
+                </div>
+
+                <div class="d-flex justify-content-between">
+                    <button type="submit" class="btn btn-primary" (click)="updateStudent()">
+                        <i class="fas fa-save"></i> Save Changes
+                    </button>
+                    <button type="reset" class="btn btn-danger">
+                        <i class="fas fa-times"></i> Cancel
+                    </button>
+                </div>
+        </div>
+    </div>
+    <div *ngIf="successMessage" class="alert alert-success text-center">
+        {{ successMessage }}
+    </div>
+</body>
+
+</html>

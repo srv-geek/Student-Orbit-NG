@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <!-- Logo & Welcome Message -->
+      <a class="navbar-brand d-flex align-items-center" routerLink="/admin-dashboard">
+        <img src="assets/images/student-orbit.webp" alt="Logo" class="logo" />
+        <span class="welcome-text">Welcome, Admin </span>
+      </a>
+  
+      <!-- Navbar Toggler for Mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!-- Navbar Items -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a routerLink="/add-user" routerLinkActive="active" class="nav-link">Add User</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/all-users" routerLinkActive="active" class="nav-link">All Users</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/add-subject" routerLinkActive="active" class="nav-link">Add Subject</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/all-subjects" routerLinkActive="active" class="nav-link">All Subjects</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/view-all-attendance" routerLinkActive="active" class="nav-link">View All Attendance</a>
+          </li>
+        </ul>
+  
+        <!-- Logout Button -->
+        <a routerLink="/login" class="btn btn-danger ms-3 logout-btn">
+          <i class="fas fa-sign-out-alt"></i> Logout
+        </a>
+      </div>
+    </div>
+  </nav>
+  

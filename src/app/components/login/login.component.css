@@ -1,0 +1,108 @@
+/* Background with Gradient */
+body {
+    background: linear-gradient(to right, #ff6a00, #ee0979);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Adjusted to accommodate error message */
+}
+
+/* Login Container */
+.login-container {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Login Box */
+.login-box {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Title */
+.login-box h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Form Labels */
+.form-label {
+    font-weight: bold;
+    color: #ffdd57;
+}
+
+/* Input Fields */
+.input-group-text {
+    background: #ffdd57;
+    border: none;
+}
+
+.form-control {
+    border: none;
+    border-radius: 0;
+}
+
+/* Login Button */
+.login-btn {
+    background: #00ffcc;
+    color: black;
+    font-weight: bold;
+    border-radius: 25px;
+    padding: 10px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background: #00cc99;
+    color: white;
+}
+
+/* Forgot Password & Sign Up */
+.forgot-link,
+a {
+    color: #ffdd57;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.forgot-link:hover,
+a:hover {
+    text-decoration: underline;
+}
+
+/* Error Message Styling */
+.alert-danger {
+    background: rgba(255, 0, 0, 0.8);
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 400px;
+    text-align: center;
+    margin-top: 15px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Animation for Error Message */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .login-box {
+        padding: 20px;
+    }
+}

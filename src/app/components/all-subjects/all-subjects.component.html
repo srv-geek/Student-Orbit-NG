@@ -1,0 +1,54 @@
+<app-admin-menu></app-admin-menu>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Subjects - Student Orbit</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card custom-card">
+          <div class="card-body text-center">
+            <h2 class="table-title">📚 All Subjects</h2>
+            <p class="table-subtitle">Manage all subjects efficiently</p>
+          </div>
+      
+          <div class="table-responsive">
+            <table class="table table-bordered custom-table">
+              <thead>
+                <tr>
+                  <th>SUBJECT ID</th>
+                  <th>SUBJECT NAME</th>
+                  <th>ASSIGNED FACULTY</th>
+                  <th>ACTION</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let subject of subjects">
+                  <td>{{ subject.id }}</td>
+                  <td>{{ subject.name }}</td>
+                  <td>{{ subject.assignedFaculty }}</td>
+                  <td>
+                    <button class="btn btn-warning btn-sm" [routerLink]="['/edit-subject', subject.id]">
+                      <i class="fas fa-edit"></i> Edit
+                    </button>
+                    <button (click)="deleteSubject(subject.id)" class="btn btn-danger btn-sm">
+                      <i class="fas fa-trash"></i> Delete
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      
+
+</body>
+
+</html>

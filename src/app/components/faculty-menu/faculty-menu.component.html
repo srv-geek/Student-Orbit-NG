@@ -1,0 +1,37 @@
+<!-- Faculty Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container">
+    <!-- Logo with Home Redirection -->
+    <a class="navbar-brand d-flex align-items-center" routerLink="/faculty-dashboard">
+      <img src="assets/images/student-orbit.webp" alt="Student Orbit" class="logo" />
+      <span class="navbar-text welcome-message">Welcome, Faculty</span>
+    </a>
+   
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#facultyNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="facultyNavbar">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a routerLink="/add-student" routerLinkActive="active" class="nav-link">Add Student</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/all-students" routerLinkActive="active" class="nav-link">All Students</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/take-attendance" routerLinkActive="active" class="nav-link">Take Attendance</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/view-attendance" routerLinkActive="active" class="nav-link">View Attendance</a>
+        </li>
+      </ul>
+
+      <!-- Logout Button -->
+      <a routerLink="/login" class="btn btn-danger ms-3 logout-btn">
+        <i class="fas fa-sign-out-alt"></i> Logout
+      </a>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,69 @@
+/* Background Styling */
+body {
+    background: linear-gradient(45deg, #ff8008, #ff0080);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Card Container */
+  .custom-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Table Styling */
+  .custom-table {
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .custom-table thead {
+    background: #ff5733;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .custom-table th,
+  .custom-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+  }
+  
+  /* Table Title */
+  .table-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .table-subtitle {
+    font-size: 16px;
+    color: #ddd;
+    margin-bottom: 15px;
+  }
+  
+  /* Buttons */
+  .btn-warning {
+    background-color: #ffcc00;
+    border: none;
+    color: black;
+  }
+  
+  .btn-danger {
+    background-color: #ff4444;
+    border: none;
+    color: white;
+  }
+  
+  .btn-sm {
+    padding: 5px 10px;
+    font-size: 14px;
+    margin: 3px;
+  }
+  

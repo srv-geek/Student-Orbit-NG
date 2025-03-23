@@ -1,0 +1,154 @@
+/* Background with Gradient */
+body {
+  background: linear-gradient(to right, #ff6a00, #ee0979);
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 15px;
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffdd57 !important;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand .logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+  margin-left: 10px;
+ 
+}
+
+/* Navbar Links */
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  /* Adds spacing between Contact and Login */
+}
+
+.navbar-nav .contact-link {
+  color: white !important;
+  font-size: 1.1rem;
+}
+
+.navbar-nav .contact-link:hover {
+  color: #ffdd57 !important;
+}
+
+/* Login Button */
+.login-btn {
+  background: white;
+  color: #ff416c;
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 8px 20px;
+  transition: 0.3s;
+  white-space: nowrap;
+  /* Prevents text wrapping */
+}
+
+.login-btn:hover {
+  background: #ddd;
+  color: #ff4b2b;
+}
+
+/* Navbar Responsiveness */
+@media (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: column;
+    /* Stack Contact & Login vertically */
+    align-items: flex-start;
+    /* Align items to left */
+    gap: 10px;
+  }
+
+  .login-btn {
+    width: 100%;
+    /* Full width button on small screens */
+    text-align: center;
+  }
+}
+
+/* Hero Section */
+.content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+/* Hero Text */
+.content h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Hero Image */
+.content img {
+  max-width: 100%;
+  height: auto;
+  width: 80%;
+  max-height: 400px;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Start Button */
+.start-btn {
+  background: #00ffcc;
+  color: #333;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 10px 25px;
+  border-radius: 25px;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.start-btn:hover {
+  background: #00cc99;
+  color: black;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
+
+  .content img {
+    width: 100%;
+    max-height: 250px;
+    margin-top: 20px;
+  }
+}

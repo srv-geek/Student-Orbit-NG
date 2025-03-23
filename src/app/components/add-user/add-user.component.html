@@ -1,0 +1,79 @@
+<app-admin-menu></app-admin-menu>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register - Student Orbit</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+</head>
+
+<body>
+    <!-- Registration Form Container -->
+    <div class="register-container">
+        <div class="register-card">
+            <h2 class="text-center">Register User</h2>
+            <p class="text-center">Join Student Orbit today!</p>
+
+            <form [formGroup]="user" (ngSubmit)="registerUser()">
+                <div class="row">
+                    <!-- Left Column -->
+                    <div class="col-md-6">
+                        <!-- Username -->
+                        <div class="form-group">
+                            <label for="username"><i class="fas fa-user"></i> Username</label>
+                            <input type="text" id="username" class="form-control" placeholder="Enter Username" formControlName="username" />
+                        </div>
+
+                        <!-- Email -->
+                        <div class="form-group">
+                            <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                            <input type="email" id="email" class="form-control" placeholder="Enter Email" formControlName="email" />
+                        </div>
+
+                        <!-- Password -->
+                        <div class="form-group">
+                            <label for="password"><i class="fas fa-lock"></i> Password</label>
+                            <input type="password" id="password" class="form-control" placeholder="Enter Password" formControlName="password" />
+                        </div>
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="col-md-6">
+                        <!-- First Name -->
+                        <div class="form-group">
+                            <label for="firstName"><i class="fas fa-id-card"></i> First Name</label>
+                            <input type="text" id="firstName" class="form-control" placeholder="Enter First Name" formControlName="firstName" />
+                        </div>
+
+                        <!-- Last Name -->
+                        <div class="form-group">
+                            <label for="lastName"><i class="fas fa-id-card"></i> Last Name</label>
+                            <input type="text" id="lastName" class="form-control" placeholder="Enter Last Name" formControlName="lastName" />
+                        </div>
+
+                        <!-- Role (Dropdown) -->
+                        <div class="form-group">
+                            <label for="role"><i class="fas fa-user-shield"></i> Role</label>
+                            <select id="role" class="form-select" formControlName="role">
+                                <option value="" selected disabled>Select Role</option>
+                                <option value="admin">Admin</option>
+                                <option value="faculty">Faculty</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary w-100 mt-3"> Register </button>
+            </form>
+        </div>
+    </div>
+    <div *ngIf="successMessage" class="alert alert-success text-center">
+        {{ successMessage }}
+    </div>
+</body>
+
+</html>
