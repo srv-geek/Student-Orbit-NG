@@ -21,7 +21,7 @@
                     <label for="username" class="form-label">Username</label>
                     <div class="input-group">
                         <span class="input-group-text"><i class="fas fa-user"></i></span>
-                        <input type="text" id="username" class="form-control" placeholder="Enter your username"required name="username" [(ngModel)]="user.username"/>
+                        <input type="text" id="username" class="form-control" placeholder="Enter your username" required name="username" [(ngModel)]="user.username"/>
                     </div>
                 </div>
 
@@ -29,7 +29,7 @@
                     <label for="password" class="form-label">Password</label>
                     <div class="input-group">
                         <span class="input-group-text"><i class="fas fa-lock"></i></span>
-                        <input type="password" id="password" class="form-control" placeholder="Enter your password"required name="password" [(ngModel)]="user.password"/>
+                        <input type="password" id="password" class="form-control" placeholder="Enter your password" required name="password" [(ngModel)]="user.password"/>
                     </div>
                 </div>
 
@@ -38,9 +38,13 @@
                 </div>
 
                 <button (click)="login()" type="submit" class="btn login-btn w-100 mt-3">Login</button>
+
+                <!-- Back to Home Button (Placed Below Login) -->
+                <a href="/" class="btn go-back-btn w-100 mt-2"><i class="fas fa-arrow-left"></i> Back to Home</a>
             </form>
         </div>
     </div>
+
     <div *ngIf="errorMessage" class="alert alert-danger text-center">
         {{ errorMessage }}
     </div>

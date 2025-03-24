@@ -24,6 +24,7 @@ import { ViewAttendanceComponent } from './components/view-attendance/view-atten
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HidePasswordPipe } from './pipes/hide-password.pipe';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { HidePasswordPipe } from './pipes/hide-password.pipe';
     AllStudentsComponent,
     TakeAttendanceComponent,
     ViewAttendanceComponent,
-    HidePasswordPipe
+    HidePasswordPipe,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

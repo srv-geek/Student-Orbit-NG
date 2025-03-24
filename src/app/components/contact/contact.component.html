@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container contact-container">
+        <a href="/" class="go-back-btn">⬅ Go Back to Home</a>
+        <h2 class="text-center mb-4">Get in Touch</h2>
+        <p class="text-center">Need help? Contact us for any queries regarding Student Orbit.</p>
+        
+
+        <div class="row">
+            <!-- Contact Info -->
+            <div class="col-md-6">
+                <div class="contact-card">
+                    <h5>📞 Contact Information</h5>
+                    <p><strong>Email:</strong> support&#64;studentorbit.com</p>
+                    <p><strong>Phone:</strong> +91 7903153178</p>
+                    <p><strong>Address:</strong> Pune, Maharashtra, India</p>
+                    <p><strong>Hours:</strong> Mon-Fri, 9 AM - 6 PM</p>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="col-md-6">
+                <div class="contact-card">
+                    <h5>✉️ Send a Message</h5>
+                    <form (submit)="submitContactForm()">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Your Name" [(ngModel)]="contact.name"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email"
+                                [(ngModel)]="contact.email" required>
+                        </div>
+                        <div class="mb-3">
+                            <select class="form-select" [(ngModel)]="contact.subject">
+                                <option value="Support">Support</option>
+                                <option value="Bug Report">Bug Report</option>
+                                <option value="General Inquiry">General Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="4" placeholder="Your Message"
+                                [(ngModel)]="contact.message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

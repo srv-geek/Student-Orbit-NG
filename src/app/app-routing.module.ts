@@ -16,6 +16,7 @@ import { EditStudentComponent } from './components/edit-student/edit-student.com
 import { ViewAllAttendanceComponent } from './components/view-all-attendance/view-all-attendance.component';
 import { TakeAttendanceComponent } from './components/take-attendance/take-attendance.component';
 import { ViewAttendanceComponent } from './components/view-attendance/view-attendance.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 const routes: Routes = [
   {
@@ -23,6 +24,9 @@ const routes: Routes = [
   },
   {
     path: 'login', component: LoginComponent
+  },
+  {
+    path: 'contact', component: ContactComponent
   },
   {
     path: 'admin-dashboard', component: AdminDashboardComponent

@@ -1,0 +1,134 @@
+/* 🔹 Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* 🔹 Full-Page Background */
+html,
+body {
+    height: 100%;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* 🔹 Main Container */
+.container.contact-container {
+    width: 70%;
+    /* Increased width for a wider form */
+    max-width: 1000px;
+    min-height: 85vh;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* 🔹 Go Back Button */
+.go-back-btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    background: #ff4b5c;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.go-back-btn:hover {
+    background: #e03e50;
+}
+
+/* 🔹 Contact Info & Form Layout */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.col-md-6 {
+    flex: 1;
+    min-width: 350px;
+}
+
+/* 🔹 Contact Card (For Info & Form) */
+.contact-card {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 🔹 Contact Information */
+.contact-card h5 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.contact-card p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+/* 🔹 Form Fields */
+.contact-card input,
+.contact-card textarea,
+.contact-card select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* 🔹 Send Message Button */
+.contact-card button {
+    width: 100%;
+    padding: 12px;
+    background: #007bff;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-card button:hover {
+    background: #0056b3;
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 1024px) {
+    .container.contact-container {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container.contact-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col-md-6 {
+        width: 100%;
+    }
+}

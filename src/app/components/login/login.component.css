@@ -6,7 +6,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; /* Adjusted to accommodate error message */
+    flex-direction: column;
+    /* Adjusted to accommodate error message */
 }
 
 /* Login Container */
@@ -75,6 +76,24 @@ a:hover {
     text-decoration: underline;
 }
 
+/* 🔹 Back to Home Button (Styled to Match UI) */
+.go-back-btn {
+    padding: 10px;
+    background: #ff4b5c;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.go-back-btn:hover {
+    background: #e03e50;
+}
+
 /* Error Message Styling */
 .alert-danger {
     background: rgba(255, 0, 0, 0.8);
@@ -94,6 +113,7 @@ a:hover {
         opacity: 0;
         transform: translateY(-10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
