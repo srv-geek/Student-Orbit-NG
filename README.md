@@ -3,7 +3,7 @@
 _A role-based **student attendance management system** for **faculty and admin**, built with **Angular** and powered by a **Spring Boot backend**._  
 
 ## 🚀 **Features**  
-✅ **Admin Dashboard** – Adds students, Manages faculty and attendance records.  
+✅ **Admin Dashboard** – Adds students, manages faculty and attendance records.  
 ✅ **Faculty Dashboard** – Adds subjects, marks attendance, and views records.  
 ✅ **Role-Based Access** – Secure login with distinct roles and permissions.  
 ✅ **Modern UI** – Responsive design using **Bootstrap** and custom styling.  
