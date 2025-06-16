@@ -54,4 +54,4 @@ _A role-based **student attendance management system** for **faculty and admin**
 🔹 **Database**: MySQL  
 
 ## 📜 **License**  
-This project is **open-source**. Contributions are welcome! 
+This project is licensed under the [MIT License](LICENSE).
