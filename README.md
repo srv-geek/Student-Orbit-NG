@@ -49,7 +49,7 @@ _A role-based **student attendance management system** for **faculty and admin**
 - Follow the setup instructions in the backend repo.  
 
 ## 🏗 **Tech Stack**  
-🔹 **Frontend**: Angular, Bootstrap, HTML, CSS  
+🔹 **Frontend**: Angular, TypeScript, Bootstrap, HTML, CSS
 🔹 **Backend**: Spring Boot, Hibernate, REST API  
 🔹 **Database**: MySQL  
 
