@@ -9,6 +9,23 @@ _A role-based **student attendance management system** for **faculty and admin**
 ✅ **Modern UI** – Responsive design using **Bootstrap** and custom styling.  
 ✅ **REST API Integration** – Seamless data exchange with the backend.  
 
+## 📸 Screenshots
+
+### 🏠 Home Page
+![Home Page](assets/homepage.png)
+
+### 🛠️ Admin Dashboard
+![Admin Dashboard](assets/admin_dashboard.png)
+
+### 👨‍🏫 Faculty Dashboard
+![Faculty Dashboard](assets/faculty_dashboard.png)
+
+### 🔐 Login Page
+![Login Page](assets/login_page.png)
+
+### 📝 Register Page
+![Register Page](assets/register_page.png)
+
 ## 🛠 **Installation & Setup**  
 
 ### **Frontend (Angular)**  
