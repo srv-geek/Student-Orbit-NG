@@ -12,19 +12,19 @@ _A role-based **student attendance management system** for **faculty and admin**
 ## 📸 Screenshots
 
 ### 🏠 Home Page
-![Home Page](src/assets/Home_page.png)
+![Home Page](src/assets/images/Home_page.png)
 
 ### 🛠️ Admin Dashboard
-![Admin Dashboard](src/assets/Admin_dashboard.png)
+![Admin Dashboard](src/assets/images/Admin_dashboard.png)
 
 ### 👨‍🏫 Faculty Dashboard
-![Faculty Dashboard](src/assets/Faculty_dashboard.png)
+![Faculty Dashboard](src/assets/images/Faculty_dashboard.png)
 
 ### 🔐 Login Page
-![Login Page](src/assets/Login_page.png)
+![Login Page](src/assets/images/Login_page.png)
 
 ### 📝 Register Page
-![Register Page](src/assets/Register_page.png)
+![Register Page](src/assets/images/Register_page.png)
 
 ## 🛠 **Installation & Setup**  
 
