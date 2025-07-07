@@ -24,7 +24,7 @@
                 <tr>
                   <th>SUBJECT ID</th>
                   <th>SUBJECT NAME</th>
-                  <th>ASSIGNED FACULTY</th>
+                  <th>FACULTY</th>
                   <th>ACTION</th>
                 </tr>
               </thead>
@@ -32,7 +32,7 @@
                 <tr *ngFor="let subject of subjects">
                   <td>{{ subject.id }}</td>
                   <td>{{ subject.name }}</td>
-                  <td>{{ subject.assignedFaculty }}</td>
+                  <td>{{ subject.faculty }}</td>
                   <td>
                     <button class="btn btn-warning btn-sm" [routerLink]="['/edit-subject', subject.id]">
                       <i class="fas fa-edit"></i> Edit
