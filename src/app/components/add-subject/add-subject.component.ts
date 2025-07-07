@@ -15,7 +15,7 @@ export class AddSubjectComponent {
 
   subject = new FormGroup({
     name: new FormControl(),
-    assignedFaculty: new FormControl(),
+    faculty: new FormControl(),
   })
 
   addSubject() {
