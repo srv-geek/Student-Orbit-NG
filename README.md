@@ -45,7 +45,7 @@ _A role-based **student attendance management system** for **faculty and admin**
    ➡ Open **`http://localhost:4200/`** in your browser.  
 
 ### **Backend (Spring Boot)**  
-- The backend repository is available **[here](https://github.com/srv-geek/Student-Orbit/tree/master)**.  
+- The backend repository is available **[here](https://github.com/srv-geek/student-orbit-api)**.  
 - Follow the setup instructions in the backend repo.  
 
 ## 🏗 **Tech Stack**  
