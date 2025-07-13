@@ -18,7 +18,8 @@ export class TakeAttendanceComponent implements OnInit {
     this.getAllSubject();
     this.getAllStudents();
 
-    this.selectedUser = localStorage.getItem('user') || '';
+    const user = localStorage.getItem('user');
+    this.selectedUser = user ? JSON.parse(user) : null;
     console.log("Faculty Username:", this.selectedUser);
   }
 
@@ -89,32 +90,31 @@ export class TakeAttendanceComponent implements OnInit {
   }
 
   submitAttendance() {
-    if (!this.selectedSubject || !this.selectedDate || !this.selectedTime || this.selectedStudents.length === 0) {
-      alert("Please select subject, date, time, and at least one student!");
-      return;
-    }
-
-    const selectedStudentsData = this.students.filter(student =>
-      this.selectedStudents.includes(student.id)
-    );
-
-    const attendanceData = {
-      subjectId: this.selectedSubject,
-      username: this.selectedUser, // Use stored username
-      date: this.selectedDate,
-      time: this.convertTo12HourFormat(this.selectedTime),
-      students: selectedStudentsData
-    };
-
-    console.log('Attendance Data:', attendanceData); // Debugging
-
-    this.attendanceService.saveAttendance(attendanceData).subscribe(() => {
-      this.selectedStudents = [];
-      alert('✅ Attendance successfully submitted!');
-    }, (error) => {
-      console.error("Error submitting attendance:", error);
-      alert("❌ Failed to submit attendance!");
-    });
+  if (!this.selectedSubject || !this.selectedDate || !this.selectedTime || this.selectedStudents.length === 0) {
+    alert("Please select subject, date, time, and at least one student!");
+    return;
   }
+
+  const userObj = JSON.parse(localStorage.getItem('user') || '{}');
+
+  const attendanceData = {
+    subjectId: this.selectedSubject,
+    username: userObj.username, 
+    date: this.selectedDate,
+    time: this.convertTo12HourFormat(this.selectedTime),
+    numberOfStudents: this.selectedStudents.length,
+    studentIds: this.selectedStudents 
+  };
+
+  console.log('Attendance Data:', attendanceData); 
+
+  this.attendanceService.saveAttendance(attendanceData).subscribe(() => {
+    this.selectedStudents = [];
+    alert('✅ Attendance successfully submitted!');
+  }, (error) => {
+    console.error("Error submitting attendance:", error);
+    alert("❌ Failed to submit attendance!");
+  });
+}
 
 }

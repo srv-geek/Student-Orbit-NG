@@ -22,7 +22,8 @@ export class ViewAttendanceComponent implements OnInit {
 
   ngOnInit(): void {
     this.getSubjects();
-    this.selectedUser = localStorage.getItem('user') || '';
+    const user = localStorage.getItem('user');
+    this.selectedUser = user ? JSON.parse(user).username : '';
 
   }
 
